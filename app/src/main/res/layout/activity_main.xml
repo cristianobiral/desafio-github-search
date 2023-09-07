@@ -23,8 +23,9 @@
         android:layout_margin="16dp"
         android:ems="10"
         android:hint="@string/nome_usuario"
-        android:inputType="numberDecimal"
-        android:maxLength="10"
+        android:autofillHints="username"
+        android:inputType="text"
+        android:maxLength="100"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tv_titulo" />
@@ -43,11 +44,25 @@
         android:id="@+id/rv_lista_repositories"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:visibility="gone"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/btn_confirmar"
-        tools:listitem="@layout/repository_item" />
+        tools:listitem="@layout/repository_item"
+        tools:visibility="visible" />
+
+    <ProgressBar
+        android:id="@+id/pb_loader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:indeterminate="true"
+        app:layout_constraintTop_toTopOf="@+id/rv_lista_repositories"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/rv_lista_repositories"
+        tools:visibility="visible" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
