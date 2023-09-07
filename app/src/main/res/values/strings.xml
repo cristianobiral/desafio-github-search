@@ -2,4 +2,7 @@
     <string name="app_name">GitHubSearch</string>
     <string name="nome_usuario">Nome do usuário</string>
     <string name="confirmar">Confirmar</string>
+    <string name="repository_name">Nome do repositorio</string>
+    <string name="response_fail">Não foi possível recuperar os repositórios deste usuário</string>
+    <string name="compartilhar">Compartilhar</string>
 </resources>
